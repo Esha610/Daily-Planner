@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Daily Planner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#E9ECEF">
+<body>
 
 <center>
 <br>
-<table width="900" border="3" bordercolor="#2C5AA0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+<table class="planner-table">
     <!-- Header -->
     <tr>
-        <td colspan="2" bgcolor="#3498DB" height="70">
+        <td colspan="2" class="header">
             <table width="100%" border="0" cellpadding="15" cellspacing="0">
                 <tr>
                     <td align="left" valign="middle" width="50%">
-                        <font size="7" color="#FFFFFF" face="Arial"><b>Daily</b></font> 
-                        <font size="6" color="#ECF0F1" face="Arial">Planner</font>
+                        <span class="title-bold">Daily</span> <span class="title-light">Planner</span>
                     </td>
                     <td align="right" valign="middle" width="50%">
-                        <table border="1" bordercolor="#2C5AA0" cellpadding="5" cellspacing="0" bgcolor="#FFFFFF">
+                        <table class="weekdays">
                             <tr>
-                                <td align="center"><font size="2" face="Arial"><b>Mo</b><br><input type="checkbox"></font></td>
-                                <td align="center"><font size="2" face="Arial"><b>Tu</b><br><input type="checkbox"></font></td>
-                                <td align="center"><font size="2" face="Arial"><b>We</b><br><input type="checkbox"></font></td>
-                                <td align="center"><font size="2" face="Arial"><b>Th</b><br><input type="checkbox"></font></td>
-                                <td align="center"><font size="2" face="Arial"><b>Fr</b><br><input type="checkbox"></font></td>
-                                <td align="center" bgcolor="#FFE5E5"><font size="2" face="Arial"><b>Sa</b><br><input type="checkbox"></font></td>
-                                <td align="center" bgcolor="#FFE5E5"><font size="2" face="Arial"><b>Su</b><br><input type="checkbox"></font></td>
+                                <td>Mo<br><input type="checkbox"></td>
+                                <td>Tu<br><input type="checkbox"></td>
+                                <td>We<br><input type="checkbox"></td>
+                                <td>Th<br><input type="checkbox"></td>
+                                <td>Fr<br><input type="checkbox"></td>
+                                <td class="weekend">Sa<br><input type="checkbox"></td>
+                                <td class="weekend">Su<br><input type="checkbox"></td>
                             </tr>
                         </table>
                     </td>
@@ -37,19 +37,19 @@
     
     <!-- Month/Year Row with Date Picker -->
     <tr>
-        <td colspan="2" height="40" bgcolor="#D5DBDB">
+        <td colspan="2" class="date-row">
             <table width="100%" border="0" cellpadding="8" cellspacing="0">
                 <tr>
                     <td align="left" width="33%">
-                        <font size="3" face="Arial"><b>Month :</b></font> 
+                        <label>Month :</label> 
                         <input type="month">
                     </td>
                     <td align="center" width="34%">
-                        <font size="3" face="Arial"><b>Select Date :</b></font> 
+                        <label>Select Date :</label> 
                         <input type="date">
                     </td>
                     <td align="right" width="33%">
-                        <font size="3" face="Arial"><b>Week :</b></font> 
+                        <label>Week :</label> 
                         <input type="week">
                     </td>
                 </tr>
@@ -59,178 +59,91 @@
     
     <!-- Main Content Row -->
     <tr>
-        <td width="500" valign="top" bgcolor="#FAFAFA">
+        <td width="500" valign="top" class="schedule-column">
             <!-- Schedule Section -->
             <table width="100%" border="0" cellpadding="8" cellspacing="0">
-                <tr bgcolor="#5DADE2">
+                <tr class="schedule-header">
                     <td align="center" height="40">
-                        <font size="4" color="#FFFFFF" face="Arial"><b>⏰ Today's Schedule</b></font>
+                        ⏰ Today's Schedule
                     </td>
                 </tr>
             </table>
             
             <!-- Time Slots -->
-            <table width="100%" border="1" bordercolor="#BDC3C7" cellpadding="8" cellspacing="0">
-                <tr>
-                    <td width="80" bgcolor="#E8F6F3" align="center"><font size="2" face="Arial" color="#16A085"><b>06:00 AM</b></font></td>
-                    <td bgcolor="#FFFFFF"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#E8F6F3" align="center"><font size="2" face="Arial" color="#16A085"><b>07:00 AM</b></font></td>
-                    <td bgcolor="#FFFFFF"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#E8F6F3" align="center"><font size="2" face="Arial" color="#16A085"><b>08:00 AM</b></font></td>
-                    <td bgcolor="#FFFFFF"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#E8F6F3" align="center"><font size="2" face="Arial" color="#16A085"><b>09:00 AM</b></font></td>
-                    <td bgcolor="#FFFFFF"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#E8F6F3" align="center"><font size="2" face="Arial" color="#16A085"><b>10:00 AM</b></font></td>
-                    <td bgcolor="#FFFFFF"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#E8F6F3" align="center"><font size="2" face="Arial" color="#16A085"><b>11:00 AM</b></font></td>
-                    <td bgcolor="#FFFFFF"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FEF5E7" align="center"><font size="2" face="Arial" color="#D68910"><b>12:00 PM</b></font></td>
-                    <td bgcolor="#FFFBF0"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FEF5E7" align="center"><font size="2" face="Arial" color="#D68910"><b>01:00 PM</b></font></td>
-                    <td bgcolor="#FFFBF0"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FEF5E7" align="center"><font size="2" face="Arial" color="#D68910"><b>02:00 PM</b></font></td>
-                    <td bgcolor="#FFFBF0"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FEF5E7" align="center"><font size="2" face="Arial" color="#D68910"><b>03:00 PM</b></font></td>
-                    <td bgcolor="#FFFBF0"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FEF5E7" align="center"><font size="2" face="Arial" color="#D68910"><b>04:00 PM</b></font></td>
-                    <td bgcolor="#FFFBF0"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FEF5E7" align="center"><font size="2" face="Arial" color="#D68910"><b>05:00 PM</b></font></td>
-                    <td bgcolor="#FFFBF0"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FADBD8" align="center"><font size="2" face="Arial" color="#943126"><b>06:00 PM</b></font></td>
-                    <td bgcolor="#FFF5F5"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FADBD8" align="center"><font size="2" face="Arial" color="#943126"><b>07:00 PM</b></font></td>
-                    <td bgcolor="#FFF5F5"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FADBD8" align="center"><font size="2" face="Arial" color="#943126"><b>08:00 PM</b></font></td>
-                    <td bgcolor="#FFF5F5"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FADBD8" align="center"><font size="2" face="Arial" color="#943126"><b>09:00 PM</b></font></td>
-                    <td bgcolor="#FFF5F5"><input type="text" size="45"></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#FADBD8" align="center"><font size="2" face="Arial" color="#943126"><b>10:00 PM</b></font></td>
-                    <td bgcolor="#FFF5F5"><input type="text" size="45"></td>
-                </tr>
+            <table width="100%" class="time-slots" cellpadding="8" cellspacing="0">
+                <tr><td class="time morning">06:00 AM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time morning">07:00 AM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time morning">08:00 AM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time morning">09:00 AM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time morning">10:00 AM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time morning">11:00 AM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time afternoon">12:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time afternoon">01:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time afternoon">02:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time afternoon">03:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time afternoon">04:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time afternoon">05:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time evening">06:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time evening">07:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time evening">08:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time evening">09:00 PM</td><td><input type="text" size="45"></td></tr>
+                <tr><td class="time evening">10:00 PM</td><td><input type="text" size="45"></td></tr>
             </table>
         </td>
         
         <!-- Right Column -->
-        <td width="400" valign="top" bgcolor="#FFFFFF">
+        <td width="400" valign="top" class="right-column">
             <!-- Top Priorities Section -->
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr bgcolor="#E74C3C">
+                <tr class="top-priorities-header">
                     <td align="center" height="40">
-                        <font size="4" color="#FFFFFF" face="Arial"><b>⭐ Top Priorities</b></font>
+                        ⭐ Top Priorities
                     </td>
                 </tr>
                 <tr>
-                    <td bgcolor="#FADBD8" height="160" valign="top">
-                        <table width="100%" border="0" cellpadding="8" cellspacing="0">
-                            <tr>
-                                <td><textarea rows="8" cols="40"></textarea></td>
-                            </tr>
-                        </table>
+                    <td class="top-priorities-content" valign="top">
+                        <textarea rows="8" cols="40"></textarea>
                     </td>
                 </tr>
             </table>
             
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr><td height="5" bgcolor="#BDC3C7"></td></tr>
-            </table>
+            <div class="divider"></div>
             
             <!-- To-Do List Section -->
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr bgcolor="#27AE60">
+                <tr class="todo-header">
                     <td align="center" height="40">
-                        <font size="4" color="#FFFFFF" face="Arial"><b>✓ To-Do List</b></font>
+                        ✓ To-Do List
                     </td>
                 </tr>
                 <tr>
-                    <td bgcolor="#D5F4E6" height="230" valign="top">
-                        <table width="100%" border="0" cellpadding="5" cellspacing="0">
-                            <tr>
-                                <td width="30" align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
-                            <tr>
-                                <td align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
-                            <tr>
-                                <td align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
-                            <tr>
-                                <td align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
-                            <tr>
-                                <td align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
-                            <tr>
-                                <td align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
-                            <tr>
-                                <td align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
-                            <tr>
-                                <td align="center"><input type="checkbox"></td>
-                                <td><input type="text" size="35"></td>
-                            </tr>
+                    <td class="todo-content" valign="top">
+                        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="task-table">
+                            <tr><td width="30" align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
+                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
+                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
+                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
+                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
+                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
+                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
+                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
                         </table>
                     </td>
                 </tr>
             </table>
             
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr><td height="5" bgcolor="#BDC3C7"></td></tr>
-            </table>
+            <div class="divider"></div>
             
             <!-- Notes Section -->
             <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr bgcolor="#F39C12">
+                <tr class="notes-header">
                     <td align="center" height="40">
-                        <font size="4" color="#FFFFFF" face="Arial"><b>📝 Notes</b></font>
+                        📝 Notes
                     </td>
                 </tr>
                 <tr>
-                    <td bgcolor="#FEF5E7" height="160" valign="top">
-                        <table width="100%" border="0" cellpadding="8" cellspacing="0">
-                            <tr>
-                                <td><textarea rows="8" cols="40"></textarea></td>
-                            </tr>
-                        </table>
+                    <td class="notes-content" valign="top">
+                        <textarea rows="8" cols="40"></textarea>
                     </td>
                 </tr>
             </table>
@@ -239,71 +152,47 @@
     
     <!-- Water Intake Section -->
     <tr>
-        <td colspan="2" height="90" bgcolor="#D6EAF8">
+        <td colspan="2" height="90" class="water-intake">
             <table width="100%" border="0" cellpadding="5" cellspacing="0">
                 <tr>
                     <td align="center">
-                        <font size="4" face="Arial" color="#2471A3"><b>💧 Water Intake Tracker (8 Glasses Daily)</b></font>
+                        💧 Water Intake Tracker (8 Glasses Daily)
                     </td>
                 </tr>
                 <tr>
                     <td align="center">
-                        <table border="0" cellpadding="8" cellspacing="12">
+                        <table border="0" cellpadding="8" cellspacing="12" class="water-glasses">
                             <tr>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
-                                <td align="center" valign="bottom">
-                                    <table border="3" bordercolor="#2E86C1" cellpadding="0" cellspacing="0" width="40" height="55" bgcolor="#FFFFFF">
-                                        <tr><td height="22" bgcolor="#FFFFFF"></td></tr>
-                                        <tr><td bgcolor="#85C1E9" height="33"></td></tr>
-                                    </table>
+                                <td valign="bottom">
+                                    <table class="glass empty"></table>
                                     <br><input type="checkbox">
                                 </td>
                             </tr>
@@ -316,45 +205,24 @@
     
     <!-- Mood Tracker Section -->
     <tr>
-        <td colspan="2" height="70" bgcolor="#F4ECF7">
+        <td colspan="2" height="70" class="mood-tracker">
             <table width="100%" border="0" cellpadding="5" cellspacing="0">
                 <tr>
                     <td align="center">
-                        <font size="4" face="Arial" color="#6C3483"><b>😊 How Are You Feeling Today?</b></font>
+                        😊 How Are You Feeling Today?
                     </td>
                 </tr>
                 <tr>
                     <td align="center">
-                        <table border="0" cellpadding="8" cellspacing="5">
+                        <table border="0" cellpadding="8" cellspacing="5" class="mood-options">
                             <tr>
-                                <td align="center" bgcolor="#FFFFFF" width="70" height="70">
-                                    <font size="5">😡</font><br>
-                                    <input type="radio" name="mood">
-                                </td>
-                                <td align="center" bgcolor="#FFFFFF" width="70" height="70">
-                                    <font size="5">😟</font><br>
-                                    <input type="radio" name="mood">
-                                </td>
-                                <td align="center" bgcolor="#FFFFFF" width="70" height="70">
-                                    <font size="5">😐</font><br>
-                                    <input type="radio" name="mood">
-                                </td>
-                                <td align="center" bgcolor="#FFFFFF" width="70" height="70">
-                                    <font size="5">🙂</font><br>
-                                    <input type="radio" name="mood">
-                                </td>
-                                <td align="center" bgcolor="#FFFFFF" width="70" height="70">
-                                    <font size="5">😊</font><br>
-                                    <input type="radio" name="mood">
-                                </td>
-                                <td align="center" bgcolor="#FFFFFF" width="70" height="70">
-                                    <font size="5">😍</font><br>
-                                    <input type="radio" name="mood">
-                                </td>
-                                <td align="center" bgcolor="#FFFFFF" width="70" height="70">
-                                    <font size="5">🤩</font><br>
-                                    <input type="radio" name="mood">
-                                </td>
+                                <td align="center" class="mood"><font size="5">😡</font><br><input type="radio" name="mood"></td>
+                                <td align="center" class="mood"><font size="5">😟</font><br><input type="radio" name="mood"></td>
+                                <td align="center" class="mood"><font size="5">😐</font><br><input type="radio" name="mood"></td>
+                                <td align="center" class="mood"><font size="5">🙂</font><br><input type="radio" name="mood"></td>
+                                <td align="center" class="mood"><font size="5">😊</font><br><input type="radio" name="mood"></td>
+                                <td align="center" class="mood"><font size="5">😍</font><br><input type="radio" name="mood"></td>
+                                <td align="center" class="mood"><font size="5">🤩</font><br><input type="radio" name="mood"></td>
                             </tr>
                         </table>
                     </td>
@@ -365,10 +233,9 @@
     
     <!-- Footer with Quote -->
     <tr>
-        <td colspan="2" height="90" bgcolor="#2C3E50" align="center" valign="middle">
-            <font size="4" color="#ECF0F1" face="Arial"><i>"Success is the sum of small efforts repeated day in and day out."</i></font>
-            <br><br>
-            <font size="2" color="#BDC3C7" face="Arial">— Stay consistent, stay motivated! —</font>
+        <td colspan="2" height="90" class="footer">
+            <i>"Success is the sum of small efforts repeated day in and day out."</i><br><br>
+            — Stay consistent, stay motivated! —
         </td>
     </tr>
 </table>
