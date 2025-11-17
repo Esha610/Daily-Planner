@@ -1,278 +1,145 @@
-body {
-    background-color: #f2f8fd;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
+/* Shared container styles */
+.container {
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 123, 255, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
 }
 
-.planner-table {
-    width: 920px;
-    border: 4px solid #1e81b0;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 30px auto;
-    box-shadow: 0 8px 16px rgba(30, 129, 176, 0.25);
+/* Header styles for multiple IDs and classes */
+#header, #topPriorities, #todoList, #notesSection {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 12px 12px 0 0;
+  padding: 14px 0;
+  box-shadow: inset 0 -5px 10px rgb(0 123 255 / 0.4);
 }
 
-.header {
-    background: linear-gradient(45deg, #0077b6, #0096c7);
-    color: #f0f8ff;
-    height: 75px;
-    font-weight: 900;
-    font-size: 44px;
-    letter-spacing: 2px;
-    font-family: 'Arial Black', Gadget, sans-serif;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+/* Schedule section styles */
+#schedule.container {
+  background-color: #cfe2ff;
+  border: 2px solid #084298;
 }
 
-.title-bold {
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: #caf0f8;
+/* Input text fields inside schedule */
+#schedule input[type="text"] {
+  font-size: 15px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #084298;
+  transition: border-color 0.3s ease;
+}
+#schedule input[type="text"]:focus {
+  border-color: #0d6efd;
+  outline: none;
 }
 
-.title-light {
-    font-weight: 600;
-    color: #ade8f4;
+/* Weekday checkboxes container */
+.weekdays.container {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  background-color: #dbeafe;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #0d6efd;
 }
 
-.weekdays {
-    border: 2px solid #0077b6;
-    background-color: #caf0f8;
-    border-collapse: separate;
-    border-spacing: 8px 4px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 15px;
-    color: #03045e;
-    text-transform: uppercase;
-    box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
+/* Individual checkbox labels using class */
+.checkboxLabel {
+  cursor: pointer;
+  color: #084298;
+  font-weight: 600;
+  user-select: none;
+  font-size: 14px;
 }
 
-.weekdays td {
-    border-radius: 4px;
-    padding: 8px 16px;
+.checkboxLabel input[type="checkbox"] {
+  margin-left: 5px;
+  cursor: pointer;
 }
 
-.weekend {
-    background-color: #ffccd5;
-    color: #b00020;
-    font-weight: 700;
+/* Water intake glasses common style */
+.water-glass {
+  width: 40px;
+  height: 55px;
+  border-radius: 10px;
+  border: 3px solid #0d6efd;
+  background: linear-gradient(to bottom, #bbdefb 0%, #0d6efd 70%);
+  box-shadow: inset 0 4px 7px #90caf9;
+  margin: 0 auto 6px auto;
 }
 
-.date-row {
-    background-color: #cde6f6;
-    height: 45px;
-    border-bottom: 3px solid #0096c7;
+/* Mood options styled with class */
+.mood-option {
+  width: 75px;
+  height: 75px;
+  background-color: #e7f3ff;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 8px;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+  font-size: 28px;
+  transition: background-color 0.3s ease;
 }
 
-.date-row label {
-    font-weight: 700;
-    font-size: 18px;
-    color: #0077b6;
-    margin-right: 8px;
+.mood-option:hover {
+  background-color: #0d6efd;
+  color: white;
 }
 
-.schedule-column {
-    background-color: #e3f2fd;
-    vertical-align: top;
-    padding: 8px 12px;
+.mood-option input {
+  margin-top: 6px;
+  cursor: pointer;
 }
 
-.schedule-header {
-    background: linear-gradient(90deg, #023e8a, #0077b6);
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    border-radius: 5px 5px 0 0;
-    text-align: center;
+/* Textarea common styling */
+.textarea-common {
+  width: 100%;
+  min-height: 130px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid #0d6efd;
+  padding: 10px 14px;
+  resize: vertical;
+  background-color: #dbeafe;
+  box-shadow: inset 1px 1px 5px #a8c0ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.time-slots {
-    border-collapse: separate;
-    border-spacing: 0 4px;
-    width: 100%;
-    margin-top: 4px;
+/* To-do list input styling */
+.todo-input {
+  width: 95%;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #084298;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
 }
 
-.time-slots tr {
-    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    border-radius: 6px;
-    overflow: hidden;
+.todo-input:focus {
+  border-color: #0d6efd;
+  outline: none;
 }
 
-.time-slots td {
-    padding: 12px 14px;
-    vertical-align: middle;
+/* Footer styles */
+#footer {
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  color: #084298;
+  margin: 40px 20px;
 }
 
-.time {
-    text-align: center;
-    font-weight: 700;
-    font-size: 15px;
-    background-color: #90caf9;
-    color: #0d47a1;
-    border-radius: 6px 0 0 6px;
-    min-width: 90px;
-}
 
-.morning {
-    background-color: #a3cef1;
-    color: #084298;
-}
-
-.afternoon {
-    background-color: #fff59d;
-    color: #7a510a;
-}
-
-.evening {
-    background-color: #ffccbc;
-    color: #b7410e;
-}
-
-.right-column {
-    background-color: #ffffff;
-    vertical-align: top;
-    padding: 12px 18px;
-}
-
-.top-priorities-header {
-    background: #ef476f;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 8px 8px 0 0;
-}
-
-.top-priorities-content {
-    background-color: #ffd6e8;
-    padding: 14px 18px;
-    border-radius: 0 0 8px 8px;
-}
-
-.divider {
-    height: 10px;
-    background: #90caf9;
-    margin: 20px 0;
-    border-radius: 6px;
-}
-
-.todo-header {
-    background: #06d6a0;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 8px 8px 0 0;
-}
-
-.todo-content {
-    background-color: #b5f7d0;
-    padding: 14px 14px;
-    border-radius: 0 0 8px 8px;
-}
-
-.task-table td {
-    padding: 10px 8px;
-    vertical-align: middle;
-}
-
-.notes-header {
-    background: #ffb703;
-    color: white;
-    font-weight: 800;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 8px 8px 0 0;
-}
-
-.notes-content {
-    background-color: #ffe066;
-    padding: 14px 18px;
-    border-radius: 0 0 8px 8px;
-}
-
-.water-intake {
-    background-color: #ade8f4;
-    font-weight: 800;
-    font-size: 21px;
-    color: #0077b6;
-    text-align: center;
-    padding: 18px 0 10px 0;
-    border-radius: 0 0 8px 8px;
-}
-
-.water-glasses td {
-    padding: 0 10px;
-    vertical-align: bottom;
-}
-
-.glass {
-    width: 40px;
-    height: 55px;
-    border-radius: 6px;
-    border: 3px solid #0096c7;
-    background-color: white;
-    box-shadow: inset 0 4px 7px #b0e0ff;
-    margin: 0 auto;
-}
-
-.glass.empty tr:first-child td {
-    height: 22px;
-    background-color: white;
-}
-
-.glass.empty tr:last-child td {
-    height: 33px;
-    background-color: #48cae4;
-    border-radius: 0 0 6px 6px;
-}
-
-.mood-tracker {
-    background-color: #f5e9ff;
-    text-align: center;
-    font-weight: 700;
-    font-size: 22px;
-    color: #6a4c93;
-    padding: 18px 0;
-    border-radius: 8px;
-}
-
-.mood-options {
-    margin-top: 14px;
-}
-
-.mood {
-    width: 70px;
-    height: 70px;
-    background-color: #fff;
-    vertical-align: middle;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgb(200 200 200 / 0.4);
-}
-
-.mood font {
-    line-height: 70px;
-}
-
-.footer {
-    background: #001219;
-    color: #ade8f4;
-    font-style: italic;
-    font-size: 22px;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 0 0 8px 8px;
-    font-family: "Georgia", serif;
-}

@@ -8,25 +8,25 @@
 
 <center>
 <br>
-<table class="planner-table">
+<table id="planner" class="container">
     <!-- Header -->
     <tr>
-        <td colspan="2" class="header">
+        <td colspan="2" id="header" class="container">
             <table width="100%" border="0" cellpadding="15" cellspacing="0">
                 <tr>
                     <td align="left" valign="middle" width="50%">
                         <span class="title-bold">Daily</span> <span class="title-light">Planner</span>
                     </td>
                     <td align="right" valign="middle" width="50%">
-                        <table class="weekdays">
+                        <table class="weekdays container">
                             <tr>
-                                <td>Mo<br><input type="checkbox"></td>
-                                <td>Tu<br><input type="checkbox"></td>
-                                <td>We<br><input type="checkbox"></td>
-                                <td>Th<br><input type="checkbox"></td>
-                                <td>Fr<br><input type="checkbox"></td>
-                                <td class="weekend">Sa<br><input type="checkbox"></td>
-                                <td class="weekend">Su<br><input type="checkbox"></td>
+                                <td><label class="checkboxLabel">Mo <input class="checkboxInput" type="checkbox"></label></td>
+                                <td><label class="checkboxLabel">Tu <input class="checkboxInput" type="checkbox"></label></td>
+                                <td><label class="checkboxLabel">We <input class="checkboxInput" type="checkbox"></label></td>
+                                <td><label class="checkboxLabel">Th <input class="checkboxInput" type="checkbox"></label></td>
+                                <td><label class="checkboxLabel">Fr <input class="checkboxInput" type="checkbox"></label></td>
+                                <td class="weekend"><label class="checkboxLabel">Sa <input class="checkboxInput" type="checkbox"></label></td>
+                                <td class="weekend"><label class="checkboxLabel">Su <input class="checkboxInput" type="checkbox"></label></td>
                             </tr>
                         </table>
                     </td>
@@ -35,9 +35,9 @@
         </td>
     </tr>
     
-    <!-- Month/Year Row with Date Picker -->
+    <!-- Month/Year Row -->
     <tr>
-        <td colspan="2" class="date-row">
+        <td colspan="2" class="date-row container">
             <table width="100%" border="0" cellpadding="8" cellspacing="0">
                 <tr>
                     <td align="left" width="33%">
@@ -59,7 +59,7 @@
     
     <!-- Main Content Row -->
     <tr>
-        <td width="500" valign="top" class="schedule-column">
+        <td width="500" valign="top" id="schedule" class="container schedule-column">
             <!-- Schedule Section -->
             <table width="100%" border="0" cellpadding="8" cellspacing="0">
                 <tr class="schedule-header">
@@ -91,113 +91,56 @@
             </table>
         </td>
         
-        <!-- Right Column -->
         <td width="400" valign="top" class="right-column">
             <!-- Top Priorities Section -->
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr class="top-priorities-header">
-                    <td align="center" height="40">
-                        ⭐ Top Priorities
-                    </td>
-                </tr>
-                <tr>
-                    <td class="top-priorities-content" valign="top">
-                        <textarea rows="8" cols="40"></textarea>
-                    </td>
-                </tr>
-            </table>
+            <div id="topPriorities" class="container">
+                <div class="top-priorities-header">⭐ Top Priorities</div>
+                <textarea class="taskTextarea" rows="8" cols="40"></textarea>
+            </div>
             
             <div class="divider"></div>
             
             <!-- To-Do List Section -->
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr class="todo-header">
-                    <td align="center" height="40">
-                        ✓ To-Do List
-                    </td>
-                </tr>
-                <tr>
-                    <td class="todo-content" valign="top">
-                        <table width="100%" border="0" cellpadding="5" cellspacing="0" class="task-table">
-                            <tr><td width="30" align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                            <tr><td align="center"><input type="checkbox"></td><td><input type="text" size="35"></td></tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+            <div id="toDoList" class="container">
+                <div class="todo-header">✓ To-Do List</div>
+                <div class="todo-content">
+                    <table class="task-table">
+                        <tr><td width="30" align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
+                    </table>
+                </div>
+            </div>
             
             <div class="divider"></div>
             
             <!-- Notes Section -->
-            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr class="notes-header">
-                    <td align="center" height="40">
-                        📝 Notes
-                    </td>
-                </tr>
-                <tr>
-                    <td class="notes-content" valign="top">
-                        <textarea rows="8" cols="40"></textarea>
-                    </td>
-                </tr>
-            </table>
+            <div id="notesSection" class="container">
+                <div class="notes-header">📝 Notes</div>
+                <textarea class="taskTextarea" rows="8" cols="40"></textarea>
+            </div>
         </td>
     </tr>
     
     <!-- Water Intake Section -->
     <tr>
-        <td colspan="2" height="90" class="water-intake">
-            <table width="100%" border="0" cellpadding="5" cellspacing="0">
+        <td colspan="2" id="waterIntake" class="container water-intake">
+            💧 Water Intake Tracker (8 Glasses Daily)
+            <table class="water-glasses">
                 <tr>
-                    <td align="center">
-                        💧 Water Intake Tracker (8 Glasses Daily)
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <table border="0" cellpadding="8" cellspacing="12" class="water-glasses">
-                            <tr>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                                <td valign="bottom">
-                                    <table class="glass empty"></table>
-                                    <br><input type="checkbox">
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
+                    <td><div class="water-glass"></div><input type="checkbox"></td>
                 </tr>
             </table>
         </td>
@@ -205,35 +148,25 @@
     
     <!-- Mood Tracker Section -->
     <tr>
-        <td colspan="2" height="70" class="mood-tracker">
-            <table width="100%" border="0" cellpadding="5" cellspacing="0">
+        <td colspan="2" id="moodTracker" class="container mood-tracker">
+            😊 How Are You Feeling Today?
+            <table class="mood-options">
                 <tr>
-                    <td align="center">
-                        😊 How Are You Feeling Today?
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <table border="0" cellpadding="8" cellspacing="5" class="mood-options">
-                            <tr>
-                                <td align="center" class="mood"><font size="5">😡</font><br><input type="radio" name="mood"></td>
-                                <td align="center" class="mood"><font size="5">😟</font><br><input type="radio" name="mood"></td>
-                                <td align="center" class="mood"><font size="5">😐</font><br><input type="radio" name="mood"></td>
-                                <td align="center" class="mood"><font size="5">🙂</font><br><input type="radio" name="mood"></td>
-                                <td align="center" class="mood"><font size="5">😊</font><br><input type="radio" name="mood"></td>
-                                <td align="center" class="mood"><font size="5">😍</font><br><input type="radio" name="mood"></td>
-                                <td align="center" class="mood"><font size="5">🤩</font><br><input type="radio" name="mood"></td>
-                            </tr>
-                        </table>
-                    </td>
+                    <td class="moodOption"><font size="5">😡</font><br><input type="radio" name="mood"></td>
+                    <td class="moodOption"><font size="5">😟</font><br><input type="radio" name="mood"></td>
+                    <td class="moodOption"><font size="5">😐</font><br><input type="radio" name="mood"></td>
+                    <td class="moodOption"><font size="5">🙂</font><br><input type="radio" name="mood"></td>
+                    <td class="moodOption"><font size="5">😊</font><br><input type="radio" name="mood"></td>
+                    <td class="moodOption"><font size="5">😍</font><br><input type="radio" name="mood"></td>
+                    <td class="moodOption"><font size="5">🤩</font><br><input type="radio" name="mood"></td>
                 </tr>
             </table>
         </td>
     </tr>
     
-    <!-- Footer with Quote -->
+    <!-- Footer -->
     <tr>
-        <td colspan="2" height="90" class="footer">
+        <td colspan="2" id="footer" class="footer">
             <i>"Success is the sum of small efforts repeated day in and day out."</i><br><br>
             — Stay consistent, stay motivated! —
         </td>
