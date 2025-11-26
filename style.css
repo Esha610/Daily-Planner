@@ -1,145 +1,440 @@
-/* Shared container styles */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+#planner {
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .container {
-  padding: 15px 20px;
-  margin-bottom: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 12px rgba(0, 123, 255, 0.2);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f8ff;
+    padding: 15px;
 }
 
-/* Header styles for multiple IDs and classes */
-#header, #topPriorities, #todoList, #notesSection {
-  background-color: #007BFF;
-  color: white;
-  text-align: center;
-  font-weight: 700;
-  font-size: 22px;
-  border-radius: 12px 12px 0 0;
-  padding: 14px 0;
-  box-shadow: inset 0 -5px 10px rgb(0 123 255 / 0.4);
+/* Header Section */
+#header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
 }
 
-/* Schedule section styles */
-#schedule.container {
-  background-color: #cfe2ff;
-  border: 2px solid #084298;
+.header-left {
+    flex: 1;
 }
 
-/* Input text fields inside schedule */
-#schedule input[type="text"] {
-  font-size: 15px;
-  padding: 7px 10px;
-  border-radius: 8px;
-  border: 1.5px solid #084298;
-  transition: border-color 0.3s ease;
-}
-#schedule input[type="text"]:focus {
-  border-color: #0d6efd;
-  outline: none;
+.title-bold {
+    font-size: 32px;
+    font-weight: bold;
 }
 
-/* Weekday checkboxes container */
-.weekdays.container {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  background-color: #dbeafe;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid #0d6efd;
+.title-light {
+    font-size: 32px;
+    font-weight: 300;
 }
 
-/* Individual checkbox labels using class */
-.checkboxLabel {
-  cursor: pointer;
-  color: #084298;
-  font-weight: 600;
-  user-select: none;
-  font-size: 14px;
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.checkboxLabel input[type="checkbox"] {
-  margin-left: 5px;
-  cursor: pointer;
+/* Weekdays */
+.weekdays {
+    display: flex;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
 }
 
-/* Water intake glasses common style */
+.checkbox-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.checkbox-label:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.checkbox-label.weekend {
+    color: #ffd700;
+}
+
+.checkbox-input {
+    cursor: pointer;
+}
+
+/* Date Row */
+.date-row {
+    background-color: #f8f9fa;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.date-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-input-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.date-input-group input {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.date-input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fafbfc;
+}
+
+/* Schedule Column */
+.schedule-column {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+}
+
+.time-slots {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.time-slot {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e8e8e8;
+    transition: background-color 0.2s;
+}
+
+.time-slot:last-child {
+    border-bottom: none;
+}
+
+.time-slot:hover {
+    background-color: #f8f9fa;
+}
+
+.time {
+    min-width: 90px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.time.morning {
+    color: #ff9800;
+}
+
+.time.afternoon {
+    color: #2196f3;
+}
+
+.time.evening {
+    color: #9c27b0;
+}
+
+.schedule-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.schedule-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Right Column */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-box {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+
+.top-priorities-header {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.todo-header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.notes-header {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.task-textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.task-textarea:focus {
+    outline: none;
+    background-color: #f8f9fa;
+}
+
+.divider {
+    height: 0;
+    border: none;
+}
+
+/* To-Do List */
+.todo-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-checkbox {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: #4facfe;
+}
+
+/* Water Intake Section */
+#waterIntake {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.tracker-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.water-glasses {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.water-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
 .water-glass {
-  width: 40px;
-  height: 55px;
-  border-radius: 10px;
-  border: 3px solid #0d6efd;
-  background: linear-gradient(to bottom, #bbdefb 0%, #0d6efd 70%);
-  box-shadow: inset 0 4px 7px #90caf9;
-  margin: 0 auto 6px auto;
+    width: 40px;
+    height: 50px;
+    border: 3px solid #2196f3;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(to top, #81d4fa 0%, transparent 50%);
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-/* Mood options styled with class */
+.water-glass:hover {
+    transform: scale(1.1);
+}
+
+.water-item input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Mood Tracker Section */
+#moodTracker {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.mood-options {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .mood-option {
-  width: 75px;
-  height: 75px;
-  background-color: #e7f3ff;
-  border-radius: 10px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin: 0 8px;
-  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
-  font-size: 28px;
-  transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .mood-option:hover {
-  background-color: #0d6efd;
-  color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
 }
 
-.mood-option input {
-  margin-top: 6px;
-  cursor: pointer;
+.mood-emoji {
+    font-size: 40px;
 }
 
-/* Textarea common styling */
-.textarea-common {
-  width: 100%;
-  min-height: 130px;
-  font-size: 15px;
-  border-radius: 10px;
-  border: 2px solid #0d6efd;
-  padding: 10px 14px;
-  resize: vertical;
-  background-color: #dbeafe;
-  box-shadow: inset 1px 1px 5px #a8c0ff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.mood-option input[type="radio"] {
+    cursor: pointer;
 }
 
-/* To-do list input styling */
-.todo-input {
-  width: 95%;
-  font-size: 14px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1.5px solid #084298;
-  margin-bottom: 10px;
-  transition: border-color 0.3s ease;
-}
-
-.todo-input:focus {
-  border-color: #0d6efd;
-  outline: none;
-}
-
-/* Footer styles */
+/* Footer */
 #footer {
-  font-style: italic;
-  font-weight: 700;
-  text-align: center;
-  font-size: 18px;
-  color: #084298;
-  margin: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
+/* Responsive Design */
+@media (max-width: 968px) {
+    .main-content {
+        flex-direction: column;
+    }
 
+    .header-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-right {
+        justify-content: center;
+    }
+
+    .date-row {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .weekdays {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-bold,
+    .title-light {
+        font-size: 24px;
+    }
+
+    .water-glasses,
+    .mood-options {
+        gap: 15px;
+    }
+
+    .mood-emoji {
+        font-size: 32px;
+    }
+}

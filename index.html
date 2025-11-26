@@ -1,179 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<center>
-<br>
-<table id="planner" class="container">
-    <!-- Header -->
-    <tr>
-        <td colspan="2" id="header" class="container">
-            <table width="100%" border="0" cellpadding="15" cellspacing="0">
-                <tr>
-                    <td align="left" valign="middle" width="50%">
-                        <span class="title-bold">Daily</span> <span class="title-light">Planner</span>
-                    </td>
-                    <td align="right" valign="middle" width="50%">
-                        <table class="weekdays container">
-                            <tr>
-                                <td><label class="checkboxLabel">Mo <input class="checkboxInput" type="checkbox"></label></td>
-                                <td><label class="checkboxLabel">Tu <input class="checkboxInput" type="checkbox"></label></td>
-                                <td><label class="checkboxLabel">We <input class="checkboxInput" type="checkbox"></label></td>
-                                <td><label class="checkboxLabel">Th <input class="checkboxInput" type="checkbox"></label></td>
-                                <td><label class="checkboxLabel">Fr <input class="checkboxInput" type="checkbox"></label></td>
-                                <td class="weekend"><label class="checkboxLabel">Sa <input class="checkboxInput" type="checkbox"></label></td>
-                                <td class="weekend"><label class="checkboxLabel">Su <input class="checkboxInput" type="checkbox"></label></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    
-    <!-- Month/Year Row -->
-    <tr>
-        <td colspan="2" class="date-row container">
-            <table width="100%" border="0" cellpadding="8" cellspacing="0">
-                <tr>
-                    <td align="left" width="33%">
-                        <label>Month :</label> 
-                        <input type="month">
-                    </td>
-                    <td align="center" width="34%">
-                        <label>Select Date :</label> 
-                        <input type="date">
-                    </td>
-                    <td align="right" width="33%">
-                        <label>Week :</label> 
-                        <input type="week">
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    
-    <!-- Main Content Row -->
-    <tr>
-        <td width="500" valign="top" id="schedule" class="container schedule-column">
-            <!-- Schedule Section -->
-            <table width="100%" border="0" cellpadding="8" cellspacing="0">
-                <tr class="schedule-header">
-                    <td align="center" height="40">
-                        ⏰ Today's Schedule
-                    </td>
-                </tr>
-            </table>
-            
-            <!-- Time Slots -->
-            <table width="100%" class="time-slots" cellpadding="8" cellspacing="0">
-                <tr><td class="time morning">06:00 AM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time morning">07:00 AM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time morning">08:00 AM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time morning">09:00 AM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time morning">10:00 AM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time morning">11:00 AM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time afternoon">12:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time afternoon">01:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time afternoon">02:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time afternoon">03:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time afternoon">04:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time afternoon">05:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time evening">06:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time evening">07:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time evening">08:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time evening">09:00 PM</td><td><input type="text" size="45"></td></tr>
-                <tr><td class="time evening">10:00 PM</td><td><input type="text" size="45"></td></tr>
-            </table>
-        </td>
-        
-        <td width="400" valign="top" class="right-column">
-            <!-- Top Priorities Section -->
-            <div id="topPriorities" class="container">
-                <div class="top-priorities-header">⭐ Top Priorities</div>
-                <textarea class="taskTextarea" rows="8" cols="40"></textarea>
+    <div id="planner" class="container">
+        <!-- Header -->
+        <header id="header" class="header-section">
+            <div class="header-left">
+                <span class="title-bold">Daily</span> <span class="title-light">Planner</span>
             </div>
-            
-            <div class="divider"></div>
-            
-            <!-- To-Do List Section -->
-            <div id="toDoList" class="container">
-                <div class="todo-header">✓ To-Do List</div>
-                <div class="todo-content">
-                    <table class="task-table">
-                        <tr><td width="30" align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                        <tr><td align="center"><input type="checkbox"></td><td><input class="taskInput" type="text" size="35"></td></tr>
-                    </table>
+            <div class="header-right">
+                <div class="weekdays">
+                    <label class="checkbox-label">Mo <input class="checkbox-input" type="checkbox"></label>
+                    <label class="checkbox-label">Tu <input class="checkbox-input" type="checkbox"></label>
+                    <label class="checkbox-label">We <input class="checkbox-input" type="checkbox"></label>
+                    <label class="checkbox-label">Th <input class="checkbox-input" type="checkbox"></label>
+                    <label class="checkbox-label">Fr <input class="checkbox-input" type="checkbox"></label>
+                    <label class="checkbox-label weekend">Sa <input class="checkbox-input" type="checkbox"></label>
+                    <label class="checkbox-label weekend">Su <input class="checkbox-input" type="checkbox"></label>
                 </div>
             </div>
-            
-            <div class="divider"></div>
-            
-            <!-- Notes Section -->
-            <div id="notesSection" class="container">
-                <div class="notes-header">📝 Notes</div>
-                <textarea class="taskTextarea" rows="8" cols="40"></textarea>
+        </header>
+
+        <!-- Date Selection Row -->
+        <div class="date-row">
+            <div class="date-input-group">
+                <label>Month :</label>
+                <input type="month">
             </div>
-        </td>
-    </tr>
-    
-    <!-- Water Intake Section -->
-    <tr>
-        <td colspan="2" id="waterIntake" class="container water-intake">
-            💧 Water Intake Tracker (8 Glasses Daily)
-            <table class="water-glasses">
-                <tr>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                    <td><div class="water-glass"></div><input type="checkbox"></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    
-    <!-- Mood Tracker Section -->
-    <tr>
-        <td colspan="2" id="moodTracker" class="container mood-tracker">
-            😊 How Are You Feeling Today?
-            <table class="mood-options">
-                <tr>
-                    <td class="moodOption"><font size="5">😡</font><br><input type="radio" name="mood"></td>
-                    <td class="moodOption"><font size="5">😟</font><br><input type="radio" name="mood"></td>
-                    <td class="moodOption"><font size="5">😐</font><br><input type="radio" name="mood"></td>
-                    <td class="moodOption"><font size="5">🙂</font><br><input type="radio" name="mood"></td>
-                    <td class="moodOption"><font size="5">😊</font><br><input type="radio" name="mood"></td>
-                    <td class="moodOption"><font size="5">😍</font><br><input type="radio" name="mood"></td>
-                    <td class="moodOption"><font size="5">🤩</font><br><input type="radio" name="mood"></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    
-    <!-- Footer -->
-    <tr>
-        <td colspan="2" id="footer" class="footer">
+            <div class="date-input-group">
+                <label>Select Date :</label>
+                <input type="date">
+            </div>
+            <div class="date-input-group">
+                <label>Week :</label>
+                <input type="week">
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Schedule Section -->
+            <div id="schedule" class="schedule-column">
+                <div class="schedule-header">
+                    ⏰ Today's Schedule
+                </div>
+                <div class="time-slots">
+                    <div class="time-slot">
+                        <span class="time morning">06:00 AM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time morning">07:00 AM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time morning">08:00 AM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time morning">09:00 AM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time morning">10:00 AM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time morning">11:00 AM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time afternoon">12:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time afternoon">01:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time afternoon">02:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time afternoon">03:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time afternoon">04:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time afternoon">05:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time evening">06:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time evening">07:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time evening">08:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time evening">09:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                    <div class="time-slot">
+                        <span class="time evening">10:00 PM</span>
+                        <input type="text" class="schedule-input">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Top Priorities Section -->
+                <div id="topPriorities" class="section-box">
+                    <div class="section-header top-priorities-header">⭐ Top Priorities</div>
+                    <textarea class="task-textarea" rows="8"></textarea>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- To-Do List Section -->
+                <div id="toDoList" class="section-box">
+                    <div class="section-header todo-header">✓ To-Do List</div>
+                    <div class="todo-content">
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                        <div class="todo-item">
+                            <input type="checkbox" class="todo-checkbox">
+                            <input type="text" class="task-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Notes Section -->
+                <div id="notesSection" class="section-box">
+                    <div class="section-header notes-header">📝 Notes</div>
+                    <textarea class="task-textarea" rows="8"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water Intake Section -->
+        <div id="waterIntake" class="water-intake">
+            <div class="tracker-title">💧 Water Intake Tracker (8 Glasses Daily)</div>
+            <div class="water-glasses">
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+                <div class="water-item">
+                    <div class="water-glass"></div>
+                    <input type="checkbox">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mood Tracker Section -->
+        <div id="moodTracker" class="mood-tracker">
+            <div class="tracker-title">😊 How Are You Feeling Today?</div>
+            <div class="mood-options">
+                <div class="mood-option">
+                    <span class="mood-emoji">😡</span>
+                    <input type="radio" name="mood">
+                </div>
+                <div class="mood-option">
+                    <span class="mood-emoji">😟</span>
+                    <input type="radio" name="mood">
+                </div>
+                <div class="mood-option">
+                    <span class="mood-emoji">😐</span>
+                    <input type="radio" name="mood">
+                </div>
+                <div class="mood-option">
+                    <span class="mood-emoji">🙂</span>
+                    <input type="radio" name="mood">
+                </div>
+                <div class="mood-option">
+                    <span class="mood-emoji">😊</span>
+                    <input type="radio" name="mood">
+                </div>
+                <div class="mood-option">
+                    <span class="mood-emoji">😍</span>
+                    <input type="radio" name="mood">
+                </div>
+                <div class="mood-option">
+                    <span class="mood-emoji">🤩</span>
+                    <input type="radio" name="mood">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer">
             <i>"Success is the sum of small efforts repeated day in and day out."</i><br><br>
             — Stay consistent, stay motivated! —
-        </td>
-    </tr>
-</table>
-<br>
-</center>
-
+        </footer>
+    </div>
 </body>
 </html>
